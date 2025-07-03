@@ -68,7 +68,7 @@ export const App = () => {
           case 'completed':
             return filterTodo.completed;
           default:
-            return filterTodo;
+            return true;
         }
       })
       .filter(filterTodo => {

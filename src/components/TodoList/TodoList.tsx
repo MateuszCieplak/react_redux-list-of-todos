@@ -13,11 +13,11 @@ export const TodoList: React.FC<Props> = ({ todos, currentTodo, setTodo }) => {
 
   return (
     <>
-      {!todos || todos.length === 0 && (
+      {!todos || todos.length === 0 ? (
         <p className="notification is-warning">
           There are no todos matching current filter criteria
         </p>
-      )}
+      ) : (
       <table className="table is-narrow is-fullwidth">
         <thead>
           <tr>
@@ -67,6 +67,8 @@ export const TodoList: React.FC<Props> = ({ todos, currentTodo, setTodo }) => {
           ))}
         </tbody>
       </table>
+      )}
+
     </>
   );
 };

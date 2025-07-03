@@ -26,7 +26,7 @@ export const TodoFilter: React.FC<Props> = ({ handlerSetFilter }) => {
             data-cy="statusSelect"
             onChange={e => {
               setStatus(e.target.value);
-              handlerSetFilter(e.target.value, search);
+              handlerSetFilter(e.target.value, search.trim());
             }}
           >
             <option value="all">All</option>
@@ -45,7 +45,7 @@ export const TodoFilter: React.FC<Props> = ({ handlerSetFilter }) => {
           value={search}
           onChange={e => {
             setSearch(e.target.value);
-            handlerSetFilter(status, e.target.value);
+            handlerSetFilter(status, e.target.value.trim());
           }}
         />
         <span className="icon is-left">

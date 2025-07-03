@@ -7,7 +7,7 @@ type Props = {
   todo: Todo;
   user: User;
   isLoadingUser: boolean;
-  setTodo: (todo: Todo) => void;
+  setTodo: (todo: Todo | null) => void;
 };
 
 export const TodoModal: React.FC<Props> = ({
